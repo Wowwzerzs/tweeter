@@ -30,9 +30,12 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+/* Adjustments for main container */
 main {
   width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 0 auto;
+  /* Center align the main container to the body */
   background-color: #f4f1ec;
+  padding: 20px;
+  /* Add padding for better visual appeal, adjust as needed */
 }
