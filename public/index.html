@@ -1,5 +1,3 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,6 +18,9 @@
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" />
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
   <!-- App JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -30,7 +31,23 @@
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
-    <span>tweeter</span>
+    <!-- Logo section -->
+    <div class="logo">
+      <span>tweeter</span>
+    </div>
+
+    <!-- New tweet header section -->
+    <div class="new-tweet-header">
+      <!-- Text for composing a new tweet -->
+      <p id="compose">
+        <b>Write</b> a new tweet
+      </p>
+
+      <!-- Floating icon (angle-double-down) -->
+      <div class="floating">
+        <i class="fas fa-angle-double-down" style="color: red"></i>
+      </div>
+    </div>
   </nav>
 
   <!-- Page-specific (main) content here -->
