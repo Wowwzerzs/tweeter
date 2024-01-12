@@ -1,7 +1,10 @@
 /* Style for the nav element */
 nav {
-  height: 120px;
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 100;
+  /* Ensure the nav is on top of other content */
   background-color: #4056A1;
   color: #FFFFFF;
   padding: 1.5em;
