@@ -6,7 +6,10 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -18,8 +21,13 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  /* Use Source Sans 3 as the default font */
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+nav {
+  font-family: 'Bungee', sans-serif;
+  /* Use Bungee for the Tweeter logo in the nav */
+}
+
+/* Additional CSS can be defined below or in other CSS files, as per instructions */
