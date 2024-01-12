@@ -1,0 +1,14 @@
+/* Style for the nav element */
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 0 1.5em;
+  /* 1.5ems of space on the right and left */
+}
+
+/* Style for the span within the nav */
+nav span {
+  font-family: 'Bungee', sans-serif;
+}
