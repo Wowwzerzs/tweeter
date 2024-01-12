@@ -1,0 +1,34 @@
+/* Style for the header element */
+header {
+  height: 500px;
+  /* Visible portion height */
+  width: 100%;
+  /* 100% width of its parent container */
+  margin-top: 8rem;
+  /* Adjust as needed for spacing */
+  background-color: #AC3CAC;
+  /* Different color than nav and body */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+  /* Replace with your chosen image */
+  background-repeat: repeat;
+  /* Adjust as needed */
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* Style for the avatar */
+header img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style for the name */
+header h2 {
+  margin-top: 10px;
+  /* Adjust as needed for spacing */
+  color: #ecf0f1;
+  /* Text color */
+}
