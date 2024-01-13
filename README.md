@@ -16,11 +16,11 @@ Users can create short posts of up to 140 characters and have them append to the
 
 ## App Views
 #### Desktop App Flow:
-!["Desktop App Flow:"](https://github.com/Wowwzerzs/tinyapp/blob/master/docs/login-page.png?raw=true)
+!["Desktop App Flow:"](https://github.com/Wowwzerzs/tweeter/blob/master/doc/Desktop-flow.png.png?raw=true)
+!["Desktop App Flow 2:"](https://github.com/Wowwzerzs/tweeter/blob/master/doc/Desktop-flow-2.png.png?raw=true)
+!["Desktop App Flow 3:"](https://github.com/Wowwzerzs/tweeter/blob/master/doc/Desktop-flow-3.png.png?raw=true)
 #### Error Handling:
-!["Error Handling:"](https://github.com/Wowwzerzs/tinyapp/blob/master/docs/login-page.png?raw=true)
-#### Responsive Design:
-!["Responsive Design:"](https://github.com/Wowwzerzs/tinyapp/blob/master/docs/login-page.png?raw=true)
+!["Error Handling:"](https://github.com/Wowwzerzs/tweeter/blob/master/doc/Error-handling.png.png?raw=true)
 
 ## Dependencies
 
