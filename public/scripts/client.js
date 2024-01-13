@@ -70,6 +70,19 @@ $(document).ready(function () {
     // Prevent the default form submission behavior
     event.preventDefault();
 
+    // Get the tweet text from the form
+    const tweetText = $('#tweet-text').val();
+
+    // Validate tweet text
+    if (!tweetText) {
+      alert("Tweet content cannot be empty.");
+      return;
+    }
+    if (tweetText.length > 140) {
+      alert("Tweet is too long. Please keep it under 140 characters.");
+      return;
+    }
+
     // Serialize the form data
     const serializedData = $(this).serialize();
 
