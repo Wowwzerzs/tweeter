@@ -57,3 +57,8 @@
   color: #777;
   font-family: "Bungee", sans-serif;
 }
+
+/* Style for invalid counter (turns red) */
+.new-tweet .counter.invalid {
+  color: red;
+}
