@@ -1,0 +1,57 @@
+/* Style for the new tweet form */
+.new-tweet {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Style for the form heading */
+.new-tweet h2 {
+  font-size: 24px;
+  color: #333;
+  /* Set text color */
+}
+
+/* Style for the form label */
+.new-tweet label {
+  font-size: 16px;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+  /* Add spacing between label and textarea */
+}
+
+/* Style for the textarea */
+.new-tweet textarea {
+  width: 100%;
+  height: 80px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  /* Allow vertical resizing of textarea */
+  margin-bottom: 12px;
+  /* Add spacing between textarea and button */
+}
+
+/* Style for the form button */
+.new-tweet button {
+  background-color: #55acee;
+  color: #fff;
+  /* Set button text color */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for the character counter */
+.new-tweet .counter {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #777;
+}
