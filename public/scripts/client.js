@@ -1,10 +1,7 @@
 $(document).ready(function () {
   // Function to calculate the time difference from now
   const timeAgo = function (timeStamp) {
-    const currentTime = Date.now();
-    const timeDifference = currentTime - timeStamp;
-    const daysAgo = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-    return `${daysAgo} days ago`;
+    return timeago.format(timeStamp); // Use timeago.format to display time passed
   };
 
   // Escape function to prevent XSS
@@ -47,13 +44,12 @@ $(document).ready(function () {
     // Loop through tweets and prepend each to the container
     tweets.forEach(tweet => {
       const $tweet = createTweetElement(tweet);
-      $('#tweets-container').prepend($tweet);
-    });
 
-    // Display the time passed since tweet creation
-    $(".time-ago").each(function () {
-      const timeStamp = parseInt($(this).text());
-      $(this).text(timeAgo(timeStamp));
+      // Display the time passed since tweet creation using timeago
+      const $timeAgo = $tweet.find('.time-ago');
+      $timeAgo.text(timeAgo(tweet.created_at));
+
+      $('#tweets-container').prepend($tweet);
     });
   };
 
@@ -74,7 +70,6 @@ $(document).ready(function () {
 
   // Event listener for form submission
   $("#tweet-form").submit(function (event) {
-
     // Hide the error container upon submission behavior
     $(".error-container").slideUp();
 
@@ -93,7 +88,6 @@ $(document).ready(function () {
       $(".error-container").text("Tweet is too long. Please keep it under 140 characters.").slideDown();
       return;
     }
-
 
     // Serialize the form data
     const serializedData = $(this).serialize();
