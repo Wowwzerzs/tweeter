@@ -40,7 +40,7 @@ $(document).ready(function () {
     // Loop through tweets and append each to the container
     tweets.forEach(tweet => {
       const $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     });
 
     // Display the time passed since tweet creation
