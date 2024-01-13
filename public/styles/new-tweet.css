@@ -11,7 +11,6 @@
 .new-tweet h2 {
   font-size: 24px;
   color: #333;
-  /* Set text color */
 }
 
 /* Style for the form label */
@@ -20,7 +19,6 @@
   color: #333;
   display: block;
   margin-bottom: 8px;
-  /* Add spacing between label and textarea */
 }
 
 /* Style for the textarea */
@@ -32,16 +30,13 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: vertical;
-  /* Allow vertical resizing of textarea */
   margin-bottom: 12px;
-  /* Add spacing between textarea and button */
 }
 
 /* Style for the form button */
 .new-tweet button {
   background-color: #2446b8;
   color: #fff;
-  /* Set button text color */
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -53,7 +48,6 @@
 .new-tweet .counter {
   display: block;
   margin-top: 8px;
-  /* margin-left: 870px; */
   font-size: 25px;
   color: #777;
   font-family: "Bungee", sans-serif;
@@ -62,4 +56,16 @@
 /* Style for invalid counter (turns red) */
 .new-tweet .counter.invalid {
   color: red;
+}
+
+/* Style for the error container */
+.new-tweet .error-container {
+  background-color: #ffcccc;
+  color: #cc0000;
+  padding: 8px;
+  border: 1px solid #cc0000;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  display: none;
+  /* Initially hide the error container */
 }
