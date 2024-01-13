@@ -44,6 +44,31 @@ $(document).ready(function () {
     });
   };
 
+  // Event listener for form submission
+  $("#tweet-form").submit(function (event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    // Serialize the form data
+    const serializedData = $(this).serialize();
+
+    // Use AJAX to send a POST request to the server
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: serializedData,
+      success: function () {
+        // Clear the form and load tweets again on success
+        $('#tweet-text').val('');
+        $(".counter").text("140");
+        loadTweets();
+      },
+      error: function (err) {
+        console.error(err);
+      }
+    });
+  });
+
   // Sample tweet data
   const data = [
     {
