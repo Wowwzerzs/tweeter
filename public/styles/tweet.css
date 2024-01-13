@@ -76,12 +76,11 @@ article.tweet:hover {
 
 article.tweet:hover .icons i {
   color: #3f74f9;
-  /* Change to your preferred hover color */
 }
 
 /* Hover State for Icons */
 article.tweet:hover .icons a.flag:hover,
 article.tweet:hover .icons a.retweet:hover,
 article.tweet:hover .icons a.like:hover {
-  color: #F9A03F;
+  color: #2446b8;
 }
