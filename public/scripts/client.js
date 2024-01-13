@@ -20,7 +20,7 @@ $(document).ready(function () {
           <p>${tweet.content.text}</p>
         </div>
         <footer>
-          <span>${timeAgo(tweet.created_at)}</span>
+          <span class="time-ago">${timeAgo(tweet.created_at)}</span>
           <div class="icons">
             <i class="far fa-flag"></i>
             <i class="fas fa-retweet"></i>
@@ -41,6 +41,27 @@ $(document).ready(function () {
     tweets.forEach(tweet => {
       const $tweet = createTweetElement(tweet);
       $('#tweets-container').append($tweet);
+    });
+
+    // Display the time passed since tweet creation
+    $(".time-ago").each(function () {
+      const timeStamp = parseInt($(this).text());
+      $(this).text(timeAgo(timeStamp));
+    });
+  };
+
+  const loadTweets = function () {
+    // Use AJAX to fetch tweets from the server
+    $.ajax({
+      url: "/tweets",
+      method: "GET",
+      dataType: "json",
+      success: function (tweets) {
+        renderTweets(tweets);
+      },
+      error: function (err) {
+        console.error(err);
+      }
     });
   };
 
@@ -69,43 +90,5 @@ $(document).ready(function () {
     });
   });
 
-  // Sample tweet data
-  const data = [
-    {
-      "user": {
-        "name": "Drizzy",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@Drizzerler"
-      },
-      "content": {
-        "text": "Anita MAX WYNN!"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
-
-  // Render the sample tweets
-  renderTweets(data);
+  loadTweets();
 });
