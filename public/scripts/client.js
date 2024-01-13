@@ -44,7 +44,7 @@ $(document).ready(function () {
     // Clear the existing tweets in the container
     $('#tweets-container').empty();
 
-    // Loop through tweets and append each to the container
+    // Loop through tweets and prepend each to the container
     tweets.forEach(tweet => {
       const $tweet = createTweetElement(tweet);
       $('#tweets-container').prepend($tweet);
@@ -74,6 +74,10 @@ $(document).ready(function () {
 
   // Event listener for form submission
   $("#tweet-form").submit(function (event) {
+
+    // Hide the error container upon submission behavior
+    $(".error-container").slideUp();
+
     // Prevent the default form submission behavior
     event.preventDefault();
 
@@ -82,13 +86,14 @@ $(document).ready(function () {
 
     // Validate tweet text
     if (!tweetText) {
-      alert("Tweet content cannot be empty.");
+      $(".error-container").text("Tweet content cannot be empty.").slideDown();
       return;
     }
     if (tweetText.length > 140) {
-      alert("Tweet is too long. Please keep it under 140 characters.");
+      $(".error-container").text("Tweet is too long. Please keep it under 140 characters.").slideDown();
       return;
     }
+
 
     // Serialize the form data
     const serializedData = $(this).serialize();
