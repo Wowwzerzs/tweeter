@@ -46,6 +46,7 @@
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "Bungee", sans-serif;
 }
 
 /* Style for the character counter */
@@ -54,4 +55,5 @@
   margin-top: 8px;
   font-size: 14px;
   color: #777;
+  font-family: "Bungee", sans-serif;
 }
