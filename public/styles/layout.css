@@ -25,6 +25,7 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
 /* Custom Font Everywhere */
 body {
   font-family: "Source Sans Pro", sans-serif;
@@ -34,8 +35,6 @@ body {
 main {
   width: 90%;
   margin: 0 auto;
-  /* Center align the main container to the body */
   background-color: #f4f1ec;
   padding: 20px;
-  /* Add padding for better visual appeal, adjust as needed */
 }
