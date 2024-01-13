@@ -1,23 +1,30 @@
 $(document).ready(function () {
-  const createTweetElement = function (tweet) {
-    // Function to calculate the time difference from now
-    const timeAgo = (timeStamp) => {
-      const currentTime = Date.now();
-      const timeDifference = currentTime - timeStamp;
-      const daysAgo = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-      return `${daysAgo} days ago`;
-    };
+  // Function to calculate the time difference from now
+  const timeAgo = function (timeStamp) {
+    const currentTime = Date.now();
+    const timeDifference = currentTime - timeStamp;
+    const daysAgo = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    return `${daysAgo} days ago`;
+  };
 
-    // Create the tweet article element
+  // Escape function to prevent XSS
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+  // Create the tweet article element
+  const createTweetElement = function (tweet) {
     const $tweet = $(`
       <article class="tweet">
         <header>
-          <img src="${tweet.user.avatars}" alt="Profile Image">
-          <h3>${tweet.user.name}</h3>
-          <span>${tweet.user.handle}</span>
+          <img src="${escape(tweet.user.avatars)}" alt="Profile Image">
+          <h3>${escape(tweet.user.name)}</h3>
+          <span>${escape(tweet.user.handle)}</span>
         </header>
         <div class="tweet-content">
-          <p>${tweet.content.text}</p>
+          <p>${escape(tweet.content.text)}</p>
         </div>
         <footer>
           <span class="time-ago">${timeAgo(tweet.created_at)}</span>
