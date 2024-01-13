@@ -51,9 +51,11 @@
 
 /* Style for the character counter */
 .new-tweet .counter {
-  display: block;
+  /* display: block; */
   margin-top: 8px;
-  font-size: 14px;
+  margin-left: 870px;
+  /* removed display: block; to add margin-left */
+  font-size: 25px;
   color: #777;
   font-family: "Bungee", sans-serif;
 }
